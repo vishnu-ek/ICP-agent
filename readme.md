@@ -66,6 +66,7 @@ or
 pip install -r requirements.txt
 playwright install chromium
 
+```
 
 Create a `.env` file in the project root:
 
