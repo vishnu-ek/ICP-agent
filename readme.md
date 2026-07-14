@@ -2,7 +2,7 @@
 
 I have built a two-stage pipeline that downloads a conference agenda PDF, extracts speaker/company
 data from it, and evaluates which companies fit ascendo.ai's Ideal Customer Profile (ICP).
-
+The list of such companies can be used for lead generation.
 ## What it does
 
 1. **Stage 1 — Download (`agent1/`)**
@@ -124,5 +124,28 @@ Field service teams are drowning in information. but they are scattered across P
 - Agents make their life easy by acting as frontline responders, active 24/7, instantly deciding, responding to queries, and     perform actions.
 - Agents augument technician's work by serving as intelligent assistant. It can run through tonnes of knowlege and tell in instant what can be done to fix the issue thereby imporving first-time fix rates. This is something that we are trying to do in my company Bosch.
 - it can do prediction by monitoring the fieild variables and can take preventive actions, and make corrections to avoid future occurance all together
+
+## Improvements:
+Text normalization: Text normalization for companies has not been implemented yet.
+
+Entity validation: The entities extracted from the agenda may appear to be companies, but they might not be. This needs to be handled appropriately.
+
+Rate limiting: Although built-in rate limiters are available for Gemini API calls, they have not yet been integrated into the agent.
+
+Caching: Extensive caching techniques can be implemented both within individual execution loops and across different execution cycles.
+
+Memory persistence: The data classes used to store memory states currently reside in RAM; they should be made persistent (e.g., using a database or local storage).
+
+Logging: A proper, comprehensive logging system needs to be implemented.
+
+Parallelization: Parallelization methods should be implemented to extract named entities from PDFs concurrently, which would significantly reduce latency.
+
+Generalization: The solution currently works for only one website. It can be generalized by adding more executor actions to agent1.
+
+Decoupling: The actions of agent1 and agent2 should be decoupled so they can scale and operate independently.
+
+Information fetching: A more robust method for fetching additional company information can be implemented as an alternative to Serper.
+
+Hardcoding: user details are hardcoded and should be moved to a env or config file
 
  
