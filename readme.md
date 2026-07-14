@@ -57,9 +57,15 @@ data from it, and evaluates which companies fit ascendo.ai's Ideal Customer Prof
 ## Setup
 
 ```bash
-pip install playwright pdfplumber requests python-dotenv google-genai
+pip install playwright pdfplumber requests python-dotenv google-genai openpyxl
 playwright install chromium
 ```
+or 
+
+```bash
+pip install -r requirements.txt
+playwright install chromium
+
 
 Create a `.env` file in the project root:
 
