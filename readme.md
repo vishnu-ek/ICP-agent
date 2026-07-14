@@ -51,7 +51,8 @@ The list of such companies can be used for lead generation.
 │   ├── companyLookUp.py            # web search tool used when a company is unfamiliar
 │   └── data2.py                     # dataclasses: speakerEntry, icpFit, actionRecord, etc.
 └── tools/
-    └── wrbTool.py             # rule-based Playwright downloader (fast path, tried first)
+    ├── wrbTool.py                 # web search tool used when a company is unfamiliar
+    └── saveResult.py              # save the result as an excel
 ```
 
 ## Setup
