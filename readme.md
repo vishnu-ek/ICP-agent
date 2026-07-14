@@ -1,4 +1,4 @@
-# Agenda ICP Pipeline
+# AI Agent for evaluating Ideal Customer Profile 
 
 I have built a two-stage pipeline that downloads a conference agenda PDF, extracts speaker/company
 data from it, and evaluates which companies fit ascendo.ai's Ideal Customer Profile (ICP).
@@ -119,33 +119,33 @@ memory, results = agent.run()
   `maxIterations`, default 3)
 
 
-## usage of agents for field service community:
+## Usage of agents for field service community:
 Field service teams are drowning in information. but they are scattered across PDFs, CRMs, knowledge bases, and as raw knowledge in technician's brain. AI agents can be build to efficiently put that knowledge to use.
 - Agents make their life easy by acting as frontline responders, active 24/7, instantly deciding, responding to queries, and     perform actions.
 - Agents augument technician's work by serving as intelligent assistant. It can run through tonnes of knowlege and tell in instant what can be done to fix the issue thereby imporving first-time fix rates. This is something that we are trying to do in my company Bosch.
 - it can do prediction by monitoring the fieild variables and can take preventive actions, and make corrections to avoid future occurance all together
 
-## Improvements:
-Text normalization: Text normalization for companies has not been implemented yet.
+## Additional improvements:
+1. Text normalization: Text normalization for companies has not been implemented yet.
 
-Entity validation: The entities extracted from the agenda may appear to be companies, but they might not be. This needs to be handled appropriately.
+2. Entity validation: The entities extracted from the agenda may appear to be companies, but they might not be. This needs to be handled appropriately.
 
-Rate limiting: Although built-in rate limiters are available for Gemini API calls, they have not yet been integrated into the agent.
+3. Rate limiting: Although built-in rate limiters are available for Gemini API calls, they have not yet been integrated into the agent.
 
-Caching: Extensive caching techniques can be implemented both within individual execution loops and across different execution cycles.
+4. Caching: Extensive caching techniques can be implemented both within individual execution loops and across different execution cycles.
 
-Memory persistence: The data classes used to store memory states currently reside in RAM; they should be made persistent (e.g., using a database or local storage).
+5. Memory persistence: The data classes used to store memory states currently reside in RAM; they should be made persistent (e.g., using a database or local storage).
 
-Logging: A proper, comprehensive logging system needs to be implemented.
+6. Logging: A proper, comprehensive logging system needs to be implemented.
 
-Parallelization: Parallelization methods should be implemented to extract named entities from PDFs concurrently, which would significantly reduce latency.
+7. Parallelization: Parallelization methods should be implemented to extract named entities from PDFs concurrently, which would significantly reduce latency.
 
-Generalization: The solution currently works for only one website. It can be generalized by adding more executor actions to agent1.
+8. Generalization: The solution currently works for only one website. It can be generalized by adding more executor actions to agent1.
 
-Decoupling: The actions of agent1 and agent2 should be decoupled so they can scale and operate independently.
+9. Decoupling: The actions of agent1 and agent2 should be decoupled so they can scale and operate independently.
 
-Information fetching: A more robust method for fetching additional company information can be implemented as an alternative to Serper.
+10. Information fetching: A more robust method for fetching additional company information can be implemented as an alternative to Serper.
 
-Hardcoding: user details are hardcoded and should be moved to a env or config file
+11. Hardcoding: user details are hardcoded and should be moved to a env or config file
 
  
